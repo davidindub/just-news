@@ -1,0 +1,31 @@
+{
+    "name": "Just News",
+    "description": "Stay sane by hiding the comments on TheJournal.ie. Icons made by Freepik from flaticon.com",
+    "version": "0.1.0",
+    "manifest_version": 2,
+    "icons": {
+        "16": "./newspaper-16.png",
+        "32": "./newspaper-32.png",
+        "48": "./newspaper-64.png",
+        "128": "./newspaper-128.png"
+    },
+    "background": {
+        "scripts": ["./background.js"]
+    },
+    "options_page": "./options.html",
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "https://www.thejournal.ie/*"
+    ],
+    "content_scripts": [
+        {
+          "matches": ["https://www.thejournal.ie/*"],
+          "run_at": "document_idle",
+          "css": ["./justnews.css"],
+          "js": ["./justnews.js"]
+        }
+      ]
+}
