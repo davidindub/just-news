@@ -6,4 +6,4 @@ commentLinks.forEach(function(item) {
 
 document.querySelector(".comments-count").classList.add("hideTheComments")
 document.querySelector("#comments").classList.add("hideTheComments")
-// document.querySelector("#respond").classList.add("hideTheComments")
+document.querySelector("#respond").classList.add("hideTheComments")
